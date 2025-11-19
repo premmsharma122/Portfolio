@@ -22,6 +22,7 @@ export default function PlaygroundPage() {
   ];
 
   const competitionStats = [
+    { rank: "13+", event: "Awards Won", detail: "Across LeetCode, CodeChef, HackerRank", icon: "🏅" }, // NEW AWARD STAT
     { rank: "AIR 401", event: "Meta Hacker Cup 2025", detail: "Global Rank 2244" },
     { rank: "AIR 115", event: "Amazon ML Challenge 2025", detail: "Among 6,000+ teams" },
     { rank: "Global 1712", event: "LeetCode Biweekly Contest 150", detail: "Top International Rank" },
@@ -61,19 +62,23 @@ export default function PlaygroundPage() {
         {/* --- Activity Streaks Section --- */}
         <h2 className="text-3xl font-bold text-gray-200 mb-8 mt-12">Activity Streaks</h2>
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          
           {/* Competitive Streak (LeetCode) Card */}
           <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl">
             <h3 className="text-2xl font-semibold mb-4 text-purple-400 flex items-center gap-2"><Trophy size={20} /> Competitive Streak (LeetCode)</h3>
             <p className="text-gray-400 mb-4">Daily problem solving activity across platforms.</p>
             
-            {/* LeetCode Streak Chart Image - FIXED rendering issue */}
-            <div className="relative w-full **h-40** mb-4 overflow-hidden rounded-lg group"> {/* Added fixed height for charts */}
+            {/* Image Container with conditional blur */}
+            <div className="relative w-full h-40 mb-4 overflow-hidden rounded-lg group">
                 <img 
                     src="/leetcode_streak.png" 
                     alt="LeetCode Streak Chart"
-                    className="w-full h-full **object-contain** rounded-lg filter blur-[3px] group-hover:filter-none transition-all duration-500 hover:scale-105" 
+                    // KEY FIX: Use md:filter-blur-[3px] to keep it clear on mobile (smaller than 'md')
+                    // and apply the blur/hover effect only on desktop.
+                    className="w-full h-full object-contain rounded-lg transition-all duration-500 hover:scale-105 filter-none md:filter md:blur-[3px] group-hover:filter-none" 
                 />
-                <div className="absolute inset-0 bg-gray-950/20 rounded-lg group-hover:bg-transparent transition-colors duration-500"></div> 
+                {/* Overlay only visible on desktop and removed on hover */}
+                <div className="absolute inset-0 bg-gray-950/20 rounded-lg md:block hidden group-hover:bg-transparent transition-colors duration-500"></div> 
             </div>
             
             <a href="https://leetcode.com/u/codee_runn/" target="_blank" rel="noopener noreferrer" 
@@ -87,15 +92,18 @@ export default function PlaygroundPage() {
             <h3 className="text-2xl font-semibold mb-4 text-green-400 flex items-center gap-2"><CheckCircle size={20} /> GitHub Contributions</h3>
             <p className="text-gray-400 mb-4">Commit activity throughout the last year.</p>
             
-            {/* GitHub Contributions Chart Image - FIXED rendering issue */}
-            <div className="relative w-full **h-40** mb-4 overflow-hidden rounded-lg group"> {/* Added fixed height for charts */}
+            {/* Image Container with conditional blur */}
+            <div className="relative w-full h-40 mb-4 overflow-hidden rounded-lg group">
                 <img 
-                    src="/github_contributions.png" // The file MUST be in your public folder
+                    src="/github_contributions.png" 
                     alt="GitHub Contributions Chart"
-                    className="w-full h-full **object-contain** rounded-lg filter blur-[3px] group-hover:filter-none transition-all duration-500 hover:scale-105"
+                    // KEY FIX: Apply the same mobile-first rule here
+                    className="w-full h-full object-contain rounded-lg transition-all duration-500 hover:scale-105 filter-none md:filter md:blur-[3px] group-hover:filter-none"
                 />
-                <div className="absolute inset-0 bg-gray-950/20 rounded-lg group-hover:bg-transparent transition-colors duration-500"></div>
+                {/* Overlay only visible on desktop and removed on hover */}
+                <div className="absolute inset-0 bg-gray-950/20 rounded-lg md:block hidden group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
+            
             <a href="https://github.com/premmsharma122" target="_blank" rel="noopener noreferrer" 
               className="text-cyan-400 hover:text-cyan-300 text-sm mt-4 inline-flex items-center gap-1">
               View GitHub Profile &rarr;
@@ -125,7 +133,7 @@ export default function PlaygroundPage() {
               <div key={index} className="bg-gray-800 p-4 rounded-xl border-l-4 border-yellow-500 shadow-md">
                 <div className="text-xl font-bold text-yellow-400">{achievement.rank}</div>
                 <div className="font-semibold text-gray-200">{achievement.event}</div>
-                <div className="text-sm text-gray-400">{achievement.detail}</div>
+                {achievement.detail && <div className="text-sm text-gray-400">{achievement.detail}</div>}
               </div>
             ))}
           </div>

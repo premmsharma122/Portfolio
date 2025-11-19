@@ -236,9 +236,7 @@ export default function HomePage({ setCurrentPage }) {
                         <h3 className="text-3xl font-bold mb-2">GLA University</h3>
                         <p className="text-xl text-gray-300 mb-2">Bachelor of Technology - Computer Science</p>
                         <p className="text-gray-400 mb-4">2023 - 2027 • Mathura, India</p>
-                        <div className="inline-block px-6 py-2 bg-green-600/20 border border-green-500/30 rounded-full">
-                            <span className="text-green-400 font-semibold">CGPA: 7.35</span>
-                        </div>
+                        
                     </div>
                 </div>
             </section>
