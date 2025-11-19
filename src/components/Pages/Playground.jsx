@@ -3,8 +3,11 @@ import { Code, Trophy, Zap, CheckCircle, Clock } from 'lucide-react';
 import SectionHeader from '../Common/SectionHeader';
 
 export default function PlaygroundPage() {
+  // Summing the platform counts for a consistent total problems solved estimate
+  const totalProblems = 670 + 149 + 100 + 110 + 50; 
+  
   const stats = [
-    { value: '663', label: 'Problems Solved', icon: <Code size={24} /> },
+    { value: `${totalProblems}+`, label: 'Problems Solved', icon: <Code size={24} /> },
     { value: '347', label: 'Total Active Days', icon: <Clock size={24} /> },
     { value: '72', label: 'Current Streak (Max: 81)', icon: <Zap size={24} /> },
     { value: '20', label: 'Total Contests', icon: <Trophy size={24} /> },
@@ -63,14 +66,13 @@ export default function PlaygroundPage() {
             <h3 className="text-2xl font-semibold mb-4 text-purple-400 flex items-center gap-2"><Trophy size={20} /> Competitive Streak (LeetCode)</h3>
             <p className="text-gray-400 mb-4">Daily problem solving activity across platforms.</p>
             
-            {/* LeetCode Streak Chart Image - Adjusted blur and added a subtle overlay */}
-            <div className="relative w-full h-auto mb-4 overflow-hidden rounded-lg group"> {/* Added 'group' for hover effect */}
+            {/* LeetCode Streak Chart Image - FIXED rendering issue */}
+            <div className="relative w-full **h-40** mb-4 overflow-hidden rounded-lg group"> {/* Added fixed height for charts */}
                 <img 
-                    src="/leetcode_streak.png" // Path to your image in the public folder
+                    src="/leetcode_streak.png" 
                     alt="LeetCode Streak Chart"
-                    className="w-full h-auto object-cover rounded-lg filter blur-[3px] group-hover:filter-none transition-all duration-500 hover:scale-105" // Adjusted blur to 'blur-[3px]' and added group-hover
+                    className="w-full h-full **object-contain** rounded-lg filter blur-[3px] group-hover:filter-none transition-all duration-500 hover:scale-105" 
                 />
-                {/* Subtle overlay for blending, removed stronger top gradient */}
                 <div className="absolute inset-0 bg-gray-950/20 rounded-lg group-hover:bg-transparent transition-colors duration-500"></div> 
             </div>
             
@@ -85,14 +87,13 @@ export default function PlaygroundPage() {
             <h3 className="text-2xl font-semibold mb-4 text-green-400 flex items-center gap-2"><CheckCircle size={20} /> GitHub Contributions</h3>
             <p className="text-gray-400 mb-4">Commit activity throughout the last year.</p>
             
-            {/* GitHub Contributions Chart Image - Add your image here */}
-            <div className="relative w-full h-auto mb-4 overflow-hidden rounded-lg group"> {/* Added 'group' for hover effect */}
+            {/* GitHub Contributions Chart Image - FIXED rendering issue */}
+            <div className="relative w-full **h-40** mb-4 overflow-hidden rounded-lg group"> {/* Added fixed height for charts */}
                 <img 
-                    src="/github_contributions.png" // <-- PLACE YOUR GITHUB STREAK IMAGE HERE
+                    src="/github_contributions.png" // The file MUST be in your public folder
                     alt="GitHub Contributions Chart"
-                    className="w-full h-auto object-cover rounded-lg filter blur-[3px] group-hover:filter-none transition-all duration-500 hover:scale-105" // Adjusted blur
+                    className="w-full h-full **object-contain** rounded-lg filter blur-[3px] group-hover:filter-none transition-all duration-500 hover:scale-105"
                 />
-                {/* Subtle overlay for blending */}
                 <div className="absolute inset-0 bg-gray-950/20 rounded-lg group-hover:bg-transparent transition-colors duration-500"></div>
             </div>
             <a href="https://github.com/premmsharma122" target="_blank" rel="noopener noreferrer" 
