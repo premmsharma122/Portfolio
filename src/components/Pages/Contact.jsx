@@ -76,7 +76,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 transition-colors text-white placeholder-gray-500"
-                  placeholder="john@example.com"
+                  placeholder="test@example.com"
                 />
               </div>
               
@@ -129,7 +129,7 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-4">
                   <Phone size={28} className="text-purple-400" />
-                  <span>+91 XXXXXXXXXX</span>
+                  <span>+91 9258534560</span>
                 </div>
 
                 <div className="flex items-center gap-4">
