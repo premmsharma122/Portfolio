@@ -49,7 +49,7 @@ export default function HomePage({ setCurrentPage }) {
                     <div className="text-xl md:text-3xl text-gray-300 font-light space-y-2">
                         <div className="flex items-center justify-center gap-4 flex-wrap">
                             <span className="inline-flex items-center gap-2 bg-purple-600/20 px-4 py-2 rounded-full border border-purple-500/30 shadow-xl shadow-purple-900/50">
-                                <Code size={20} /> Full Stack Developer
+                                <Code size={20} /> Mern Stack Developer
                             </span>
                             <span className="inline-flex items-center gap-2 bg-blue-600/20 px-4 py-2 rounded-full border border-blue-500/30 shadow-xl shadow-blue-900/50">
                                 <Trophy size={20} /> Competitive Programmer
@@ -83,7 +83,7 @@ export default function HomePage({ setCurrentPage }) {
                            className="p-3 bg-gray-800 hover:bg-gray-700 rounded-full transition-all hover:scale-110 shadow-md hover:shadow-blue-500/50">
                             <Linkedin size={24} />
                         </a>
-                        <a href="https://leetcode.com/u/vrbpremsharma/" target="_blank" rel="noopener noreferrer"
+                        <a href="https://codolio.com/profile/premm-122" target="_blank" rel="noopener noreferrer"
                            className="p-3 bg-gray-800 hover:bg-gray-700 rounded-full transition-all hover:scale-110 shadow-md hover:shadow-green-500/50">
                             <Code size={24} />
                         </a>
