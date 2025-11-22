@@ -9,8 +9,8 @@ export default function PlaygroundPage() {
   const stats = [
     { value: `${totalProblems}+`, label: 'Problems Solved', icon: <Code size={24} /> },
     { value: '347', label: 'Total Active Days', icon: <Clock size={24} /> },
-    { value: '72', label: 'Current Streak (Max: 81)', icon: <Zap size={24} /> },
-    { value: '20', label: 'Total Contests', icon: <Trophy size={24} /> },
+    { value: '81', label: 'Current Streak', icon: <Zap size={24} /> },
+    { value: '43', label: 'Total Contests', icon: <Trophy size={24} /> },
   ];
 
   const platforms = [
@@ -26,7 +26,7 @@ export default function PlaygroundPage() {
     { rank: "AIR 401", event: "Meta Hacker Cup 2025", detail: "Global Rank 2244" },
     { rank: "AIR 115", event: "Amazon ML Challenge 2025", detail: "Among 6,000+ teams" },
     { rank: "Global 1712", event: "LeetCode Biweekly Contest 150", detail: "Top International Rank" },
-    { rank: "1546", event: "LeetCode Rating", detail: "Competitive Edge" },
+    { rank: "1619", event: "LeetCode Rating", detail: "Competitive Edge" },
     { rank: "2★", event: "CodeChef", detail: "Rated Competitive Programmer" }
   ];
 
@@ -73,8 +73,7 @@ export default function PlaygroundPage() {
                 <img 
                     src="/leetcode_streak.png" 
                     alt="LeetCode Streak Chart"
-                    // KEY FIX: Use md:filter-blur-[3px] to keep it clear on mobile (smaller than 'md')
-                    // and apply the blur/hover effect only on desktop.
+                    
                     className="w-full h-full object-contain rounded-lg transition-all duration-500 hover:scale-105 filter-none md:filter md:blur-[3px] group-hover:filter-none" 
                 />
                 {/* Overlay only visible on desktop and removed on hover */}
@@ -112,7 +111,7 @@ export default function PlaygroundPage() {
         </div>
         
         {/* --- Platform Breakdown and Achievements --- */}
-        <h2 className="text-3xl font-bold text-gray-200 mb-8 mt-12">Problem Solved Breakdown</h2>
+        <h2 className="text-3xl font-bold text-gray-200 mb-8 mt-12">Coding Profiles with Breakdown</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-1 space-y-4">
             {platforms.map(p => (

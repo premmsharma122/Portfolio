@@ -1,10 +1,7 @@
-// import React from 'react';
-// import { Github, ExternalLink, Zap } from 'lucide-react';
-// import SectionHeader from '../Common/SectionHeader';
 import React from 'react';
 import { Github, ExternalLink, Zap, CheckCircle } from 'lucide-react'; 
 import SectionHeader from '../Common/SectionHeader';
-// Project data moved from the main Portfolio.jsx
+
 const projects = [
     {
         title: "GDVerse",
@@ -37,7 +34,7 @@ const projects = [
         icon: "🏥"
     },
     {
-        title: "Blog Web Pro",
+        title: "Blog Web App",
         fullDesc: "A full-featured blogging platform built with the MERN stack. Includes a rich text editor for content creation and category management.",
         tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
         features: ["Rich text editor for content creation", "Category & tag management", "Responsive design", "User authentication", "Comment system"],
@@ -46,7 +43,7 @@ const projects = [
         gradient: "from-orange-500 to-red-500",
         icon: "📝"
     },
-    // The rest of your projects follow this structure...
+    
     {
         title: "Weather App",
         fullDesc: "A sleek weather application that provides accurate, real-time weather information with beautiful weather-themed UI animations.",
@@ -79,7 +76,6 @@ const projects = [
     }
 ];
 
-// Reusable Project Card component to ensure DRY code
 const ProjectCard = ({ project }) => (
     <div className="rounded-3xl overflow-hidden border border-gray-700 transition-all shadow-2xl backdrop-blur-sm transform hover:scale-[1.01] duration-300"
          style={{ background: 'linear-gradient(145deg, #1f2937, #111827)' }}>

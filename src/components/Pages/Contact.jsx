@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from 'lucide-react';
-
-// !!! IMPORTANT: Replace this with your actual form submission endpoint !!!
-// Example: A Formspree endpoint (easy to set up for static sites)
 const FORM_SUBMIT_URL = 'https://formspree.io/f/mgvdaydn'; 
 
 export default function ContactPage() {

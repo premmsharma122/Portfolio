@@ -10,7 +10,6 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Function to determine which page to render
   const renderPage = () => {
     switch (currentPage) {
       case 'projects':
@@ -42,6 +41,3 @@ export default function App() {
     </div>
   );
 }
-
-// NOTE: You must also create a minimal `src/components/Layout/Footer.jsx` file.
-// For now, it can just contain a simple div with Prem Sharma © 2025.

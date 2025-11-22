@@ -2,7 +2,6 @@ import React from 'react';
 import { Github, Linkedin, Mail, Code, Server, Database, Cpu, Trophy, CheckCircle, ArrowRight, ChevronDown, Zap, Briefcase, GraduationCap } from 'lucide-react';
 import SectionHeader from '../Common/SectionHeader';
 
-// Constants moved from the main Portfolio.jsx
 const skills = {
     "Languages": ["Java", "Python", "JavaScript", "SQL", "HTML/CSS"],
     "MERN Stack": ["MongoDB", "Express.js", "React.js", "Node.js"],
