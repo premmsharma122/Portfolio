@@ -119,7 +119,7 @@ export default function HomePage({ setCurrentPage }) {
                              style={{ background: 'linear-gradient(145deg, #1f2937, #111827)' }}>
                             <div className="absolute inset-0 rounded-2xl border border-blue-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:shadow-2xl group-hover:shadow-blue-700/50"></div>
                              <div className="relative z-10">
-                                <div className="text-5xl font-bold text-blue-400 mb-2">650+</div>
+                                <div className="text-5xl font-bold text-blue-400 mb-2">1050+</div>
                                 <div className="text-gray-300">Problems Solved</div>
                             </div>
                         </div>
