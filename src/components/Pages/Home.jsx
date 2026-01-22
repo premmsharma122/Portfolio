@@ -197,9 +197,9 @@ export default function Home() {
           <SectionHeader title="Education" subtitle="Academic foundation" color="from-green-400 to-blue-400" />
           <div className="p-8 rounded-2xl border border-gray-700 shadow-xl">
             <GraduationCap className="mx-auto mb-4 text-green-400" size={48} />
-            <h3 className="text-2xl font-bold">GL Bajaj Group of Institutions</h3>
+            <h3 className="text-2xl font-bold">GLA University</h3>
             <p className="text-gray-300">B.Tech – Computer Science</p>
-            <p className="text-gray-400">CGPA 8.52 • 2023 – 2027</p>
+            <p className="text-gray-400">CGPA 7.40 • 2023 – 2027</p>
           </div>
         </div>
       </section>
