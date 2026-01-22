@@ -10,7 +10,7 @@ const navItems = [
 
 const handleDownloadResume = () => {
   const link = document.createElement('a');
-  link.href = '/final_prem_remm.pdf'; 
+  link.href = '/Prem_Sharma_Resume.pdf'; 
   link.download = 'Prem_Sharma_Resume.pdf';
   document.body.appendChild(link);
   link.click();
